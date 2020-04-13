@@ -1,0 +1,135 @@
+{
+  "input_datatypes": [ ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [
+    {
+      "name": "Inst-ncias-aws_instance.aws_instance",
+      "label": "Instâncias - aws_instance.aws_instance"
+    },
+    {
+      "name": "Outro",
+      "label": "Outro"
+    },
+    {
+      "name": "inst_ncias",
+      "label": "Instâncias"
+    },
+    {
+      "name": "aws_instance_networks",
+      "label": "aws_instance Networks"
+    }
+  ],
+  "output_groups": [  {
+    "name": "servidor",
+    "label": "servidor"
+  } ],
+  "template_input_params": [
+    {
+      "name": "aws_instance_ami",
+      "label": "Aws Instance Ami",
+      "description": "Gerado",
+      "type": "string",
+      "default": "ami-07c1207a9d40bc3bd",
+      "regex": "",
+      "group_name": "inst_ncias",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "aws_instance_aws_instance_type",
+      "label": "Aws Instance Aws Instance Type",
+      "description": "Gerado",
+      "type": "string",
+      "default": "t2.micro",
+      "regex": "",
+      "group_name": "inst_ncias",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "availability_zone",
+      "label": "Availability Zone",
+      "description": "Gerado",
+      "type": "string",
+      "default": "us-east-2b",
+      "regex": "",
+      "group_name": "inst_ncias",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "aws_instance_name",
+      "label": "Aws Instance Name",
+      "description": "Gerado",
+      "type": "string",
+      "default": "",
+      "regex": "",
+      "group_name": "inst_ncias",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "aws_key_pair_name",
+      "label": "Aws Key Pair Name",
+      "description": "Gerado",
+      "type": "string",
+      "default": "telefonica-keypair",
+      "regex": "",
+      "group_name": "inst_ncias",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "subnet_subnet_id",
+      "label": "Subnet Subnet Id",
+      "description": "Gerado",
+      "type": "string",
+      "default": "subnet-087fe7c5de203dfbe",
+      "regex": "",
+      "group_name": "aws_instance_networks",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [
+    {
+      "name": "idServidor",
+      "label": "idServidor",
+      "description": "",
+      "group_name": "servidor",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "publicIP",
+      "label": "publicIP",
+      "description": "",
+      "group_name": "servidor",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    }
+  ]
+}
