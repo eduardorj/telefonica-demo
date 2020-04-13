@@ -21,7 +21,7 @@ data "aws_subnet" "subnet" {
 
 resource "aws_instance" "aws_instance" {
   ami = "${var.aws_instance_ami}"
-  key_name = "${aws_key_pair.auth.id}"
+  key_name = "${var.aws_key_pair_name}"
   instance_type = "${var.aws_instance_aws_instance_type}"
   availability_zone = "${var.availability_zone}"
   subnet_id  = "${data.aws_subnet.subnet.id}"
@@ -30,14 +30,6 @@ resource "aws_instance" "aws_instance" {
   }
 }
 
-resource "tls_private_key" "ssh" {
-    algorithm = "RSA"
-}
-
-resource "aws_key_pair" "auth" {
-    key_name = "${var.aws_key_pair_name}"
-    public_key = "${tls_private_key.ssh.public_key_openssh}"
-}
 
 resource "aws_eip" "elastic_ip" {
   vpc = true
