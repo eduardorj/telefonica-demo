@@ -18,6 +18,10 @@
     {
       "name": "aws_instance_networks",
       "label": "aws_instance Networks"
+    },
+    {
+      "name": "aws_ebs_volume_storage",
+      "label": "aws_ebs_volume Storage"
     }
   ],
   "output_groups": [  {
@@ -108,6 +112,20 @@
       "hidden": false,
       "immutable": false,
       "immutable_after_create": false
+    },
+    {
+      "name": "volume_name_volume_size",
+      "label": "Volume Name Volume Size",
+      "description": "Gerado",
+      "type": "string",
+      "default": "",
+      "regex": "",
+      "group_name": "aws_ebs_volume_storage",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
     }
   ],
   "template_output_params": [
@@ -130,6 +148,15 @@
       "hidden": false,
       "shortname": "",
       "type": "string"
+    },
+    {
+      "name": "diskAddress",
+      "label": "diskAddress",
+      "description": "",
+      "group_name": "servidor",
+      "secured": false,
+      "hidden": false,
+      "shortname": ""
     }
   ]
 }

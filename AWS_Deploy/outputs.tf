@@ -12,3 +12,7 @@ output "publicIP" {
   value = "${aws_instance.aws_instance.public_ip}"
 }
 
+output "diskAddress" {
+  value = "${aws_ebs_volume.volume_name.address}"
+}
+

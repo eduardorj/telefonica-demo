@@ -39,3 +39,8 @@ variable "subnet_subnet_id" {
   description = "Gerado"
 }
 
+variable "volume_name_volume_size" {
+  type = "string"
+  description = "Gerado"
+}
+

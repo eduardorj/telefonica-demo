@@ -40,3 +40,14 @@ resource "aws_eip_association" "aws_instance_elastic_ip_eip_association" {
   instance_id   = "${aws_instance.aws_instance.id}"
   allocation_id = "${aws_eip.elastic_ip.id}"
 }
+
+resource "aws_ebs_volume" "volume_name" {
+    availability_zone = "${var.availability_zone}"
+    size              = "${var.volume_name_volume_size}"
+}
+
+resource "aws_volume_attachment" "aws_instance_volume_name_volume_attachment" {
+  device_name = "/dev/sdh"
+  volume_id   = "${aws_ebs_volume.volume_name.id}"
+  instance_id = "${aws_instance.aws_instance.id}"
+}
