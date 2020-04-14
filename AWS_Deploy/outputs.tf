@@ -13,6 +13,6 @@ output "publicIP" {
 }
 
 output "diskAddress" {
-  value = "${aws_ebs_volume.volume_name.address}"
+  value = "${aws_volume_attachment.device_name}"
 }
 
