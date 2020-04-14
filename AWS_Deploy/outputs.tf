@@ -13,6 +13,6 @@ output "publicIP" {
 }
 
 output "diskAddress" {
-  value = "${aws_volume_attachment.device_name}"
+  value = "${aws_volume_attachment.aws_instance_volume_name_volume_attachment.device_name}"
 }
 
