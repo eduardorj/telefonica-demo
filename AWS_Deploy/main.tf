@@ -47,7 +47,7 @@ resource "aws_ebs_volume" "volume_name" {
 }
 
 resource "aws_volume_attachment" "aws_instance_volume_name_volume_attachment" {
-  device_name = "/dev/sdh"
+  device_name = "/dev/xvdh"
   volume_id   = "${aws_ebs_volume.volume_name.id}"
   instance_id = "${aws_instance.aws_instance.id}"
 }
