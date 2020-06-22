@@ -86,7 +86,7 @@
       "label": "Aws Key Pair Name",
       "description": "Gerado",
       "type": "string",
-      "default": "telefonica-keypair",
+      "default": "tim-keypair",
       "regex": "",
       "group_name": "inst_ncias",
       "required": true,
