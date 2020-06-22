@@ -100,7 +100,7 @@
       "label": "Subnet Subnet Id",
       "description": "Gerado",
       "type": "string",
-      "default": "subnet-087fe7c5de203dfbe",
+      "default": "subnet-0044810d94b0cf02e",
       "regex": "",
       "group_name": "aws_instance_networks",
       "required": true,
