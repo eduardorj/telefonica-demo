@@ -34,8 +34,12 @@ resource "tls_private_key" "ssh" {
     algorithm = "RSA"
 }
 
+resource "random_id" "disk_name_suffix" {
+  byte_length = 4
+}
+
 resource "aws_key_pair" "auth" {
-    key_name = "${var.aws_key_pair_name}"
+    key_name = "${var.aws_key_pair_name.random_id.disk_name_suffix.hex}
     public_key = "${tls_private_key.ssh.public_key_openssh}"
 }
 
